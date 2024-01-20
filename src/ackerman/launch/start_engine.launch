@@ -1,0 +1,13 @@
+<launch>
+<!--
+
+<node pkg="joy" type="joy_node" name="joy_node" output="screen"></node>
+
+<node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="250000" />
+</node>
+-->
+<node pkg="ackerman" type="cam.py" name="pwm" output="screen"></node>
+
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+  <!-- Launch usb_cam node with dynamic reconfiguration server -->
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen">
+    <!-- Example parameters -->
+    <param name="video_device" value="/dev/video3"/>
+    <param name="image_width" value="640"/>
+    <param name="image_height" value="480"/>
+    <param name="white_balance_temperature_auto" value="true"/>
+    <!-- Add more parameters as needed -->
+    <rosparam command="load" file="$(find ackerman)/config/usb_cam_params.yaml"/>
+  </node>
+</launch>

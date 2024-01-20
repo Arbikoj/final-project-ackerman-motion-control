@@ -1,0 +1,6 @@
+# Example usb_cam dynamic reconfiguration parameters
+video_device: "/dev/video3"
+image_width: 640
+image_height: 480
+white_balance_temperature_auto: true
+# Add more parameters as needed
