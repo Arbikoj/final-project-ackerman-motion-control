@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import math
 
 def calculate_resultant_vector(angles, distances):
@@ -22,8 +23,8 @@ def calculate_resultant_vector(angles, distances):
     return resultant_x, resultant_y, resultant_magnitude, resultant_direction
 
 # Example usage
-angles_degrees = [30, 45, 60, 90]
-distances = [5, 8, 6, 10]
+angles_degrees = [45, 300.96, 154.43, 348.69]
+distances = [4.24, 5.83, 6.59, 10.2]
 
 resultant_x, resultant_y, magnitude, direction = calculate_resultant_vector(angles_degrees, distances)
 
@@ -32,4 +33,4 @@ print(f"Horizontal Component: {resultant_x:.2f}")
 print(f"Vertical Component: {resultant_y:.2f}")
 print(f"Magnitude: {magnitude:.2f}")
 print(f"Direction: {direction:.2f} degrees")
-print(f"Direction: {direction:.2f} degrees")
+print(f"Direction: {direction+360} dgre")
