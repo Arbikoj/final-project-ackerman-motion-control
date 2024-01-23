@@ -645,7 +645,7 @@ joystick_serial_SOURCE_DIR:STATIC=/home/bii/dev_ws/src/joystick_serial
 laser_geometry_DIR:PATH=/opt/ros/noetic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/liblaser_geometry.so
+lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
@@ -840,7 +840,7 @@ ydlidar_ros_driver_BINARY_DIR:STATIC=/home/bii/dev_ws/build/ydlidar_ros_driver
 ydlidar_ros_driver_SOURCE_DIR:STATIC=/home/bii/dev_ws/src/ydlidar_ros_driver
 
 //The directory containing a CMake configuration file for ydlidar_sdk.
-ydlidar_sdk_DIR:PATH=ydlidar_sdk_DIR-NOTFOUND
+ydlidar_sdk_DIR:PATH=/usr/local/lib/cmake/ydlidar_sdk
 
 
 ########################
@@ -1087,10 +1087,16 @@ PYTHON_INSTALL_DIR:INTERNAL=lib/python3/dist-packages
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
 PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: YDLIDAR_SDK_INCLUDE_DIRS
+YDLIDAR_SDK_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //YDLIDAR_SDK include directories
 YDLIDAR_SDK_INCLUDE_DIRS:INTERNAL=/usr/local/include/src;/usr/local/include
+//ADVANCED property for variable: YDLIDAR_SDK_LIBRARIES
+YDLIDAR_SDK_LIBRARIES-ADVANCED:INTERNAL=1
 //YDLIDAR_SDK libraries
 YDLIDAR_SDK_LIBRARIES:INTERNAL=ydlidar_sdk;pthread;rt
+//ADVANCED property for variable: YDLIDAR_SDK_LIBRARY_DIRS
+YDLIDAR_SDK_LIBRARY_DIRS-ADVANCED:INTERNAL=1
 //YDLIDAR_SDK library directories
 YDLIDAR_SDK_LIBRARY_DIRS:INTERNAL=
 //CMAKE_INSTALL_PREFIX during last run

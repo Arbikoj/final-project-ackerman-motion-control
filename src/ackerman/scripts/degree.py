@@ -5,16 +5,18 @@ from sensor_msgs.msg import LaserScan
 import math
 
 # Define the desired angles in degrees
-desired_angles = [0, 90, 180, -80]
+desired_angles = [0, 90, -90, 180]
 
 def laser_callback(msg):
     ranges = msg.ranges
     angle_increment = msg.angle_increment
     angle_min = msg.angle_min
 
-# Convert desired angles from degrees to radians
     desired_angles_radians = [math.radians(angle) for angle in desired_angles]
-
+    
+    distances = []
+    angle_degrees_array = []
+    
     # Extract distances at desired angles
     for angle in desired_angles_radians:
         # Calculate the index corresponding to the desired angle
@@ -26,8 +28,13 @@ def laser_callback(msg):
         # Convert angle from radians to degrees for printing
         angle_degrees = math.degrees(angle)
 
-        print(f"Angle: {angle_degrees:.2f} degrees, Distance: {distance:.2f} meters")
-
+        # print(f"Angle: {angle_degrees:.2f} degrees, Distance: {distance:.2f} meters")
+        distances.append(distance)
+        angle_degrees_array.append(angle_degrees)
+        
+    # print("Distances:", [f"{distance:.2f}" for distance in distances])
+    print("Distances :", distances)
+    print("Degrees :", angle_degrees_array)
 
 def laser_subscriber():
     rospy.init_node('laser_subscriber', anonymous=True)
