@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import math
+# menghitung resultant dari value sensor lidar
 
 def calculate_resultant_vector(angles, distances):
     # Ensure the lengths of angles and distances arrays are the same
