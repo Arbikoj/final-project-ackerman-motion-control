@@ -74,6 +74,9 @@ def laser_subscriber():
     rospy.init_node('laser_subscriber', anonymous=True)
     rospy.Subscriber('/scan', LaserScan, laser_callback)
 
+    # fig = plt.figure()
+    # ani = FuncAnimation(fig, update, interval=100)
+    # plt.show()
     
     rospy.spin()
     
