@@ -1,5 +1,5 @@
 <launch>
-<!--
+
 
 <node pkg="joy" type="joy_node" name="joy_node" output="screen"></node>
 
@@ -7,7 +7,14 @@
     <param name="port" value="/dev/ttyACM0"/>
     <param name="baud" value="250000" />
 </node>
--->
-<node pkg="ackerman" type="cam.py" name="pwm" output="screen"></node>
+
+<!-- <node pkg="ackerman" type="cam.py" name="pwm" output="screen"></node> -->
 
 </launch>
+
+
+
+<!-- 
+    no matter where you are on the pathway of your life, please dont let the pain of an imperfect past hinder the glory of your fabulous future
+
+-->

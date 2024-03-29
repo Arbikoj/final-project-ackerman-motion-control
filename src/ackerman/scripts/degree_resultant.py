@@ -26,7 +26,7 @@ def calculate_resultant_vector(angles, distances):
 
     return resultant_x, resultant_y, resultant_magnitude, resultant_direction
 
-desired_angles = [0, 90, -90, 180]
+desired_angles = [0, 90, -90, -180, ]
 
 def laser_callback(msg):
     ranges = msg.ranges

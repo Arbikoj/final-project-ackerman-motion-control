@@ -489,3 +489,30 @@ make[1]: Leaving directory '/home/bii/dev_ws/build/CMakeFiles/CMakeTmp'
 
 
 
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/bii/dev_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c78d4/fast && /usr/bin/make -f CMakeFiles/cmTC_c78d4.dir/build.make CMakeFiles/cmTC_c78d4.dir/build
+make[1]: Entering directory '/home/bii/dev_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c78d4.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_c78d4.dir/CheckSymbolExists.cxx.o -c /home/bii/dev_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_c78d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c78d4.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c78d4.dir/CheckSymbolExists.cxx.o  -o cmTC_c78d4 
+make[1]: Leaving directory '/home/bii/dev_ws/build/CMakeFiles/CMakeTmp'
+
+
+File /home/bii/dev_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

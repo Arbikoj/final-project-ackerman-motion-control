@@ -13,7 +13,7 @@
     
     <!-- Frame names -->
     <param name="map_frame" value="map" />
-    <param name="base_link" value="$(arg base_frame)" />
+    <param name="base_frame" value="$(arg base_frame)" />
     <param name="odom_frame" value="$(arg odom_frame)" />
     
     <!-- Tf use -->
@@ -48,10 +48,16 @@
       <param name="pub_drawings" value="true"/>
       <param name="pub_debug_output" value="true"/>
     -->
-    <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100"/>
+    <param name="tf_map_scanmatch_transform_frame_name" value="$(arg tf_map_scanmatch_transform_frame_name)" />
   </node>
     
-  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="map_nav_broadcaster" args="0 0 0 0 0 0 base_link laser 100"/>
+
+  <!-- <node pkg ="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0.0 0.0 0.0 /map /nav 40"/>
+
+  <node pkg ="tf" type="static_transform_publisher" name="odom_to_base_link" args="0.0 0.0 0.0 0.0 0.0 0.0 /nav /base_footprint 40"/> -->
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.2245 0.0 0.2 0.0 0.0 0.0 /base_footprint /laser_frame 40" /> -->
 </launch>
   
   
